@@ -5,15 +5,16 @@ public class VariablePractice : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        //[1]변수 선언
         int first, second, third;
 
+        //[2]변수 값 대입(할당)
         first = 10;
         second = 20;
         third = 30;
 
-        Debug.Log("first : " +  first);
-        Debug.Log("second : " + second);
-        Debug.Log("third : " + third);
+        //[3]출력(참조)
+        Debug.Log(first + "," + second + "," + third);
     }
 }
 /*
