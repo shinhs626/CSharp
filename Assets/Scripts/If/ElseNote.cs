@@ -7,7 +7,7 @@ public class ElseNote : MonoBehaviour
     {
         if (1 != 1)
         {
-            Debug.Log("1과 1은 같지 않습니다");
+            //Debug.Log("1과 1은 같지 않습니다");
         }
         else
         {
