@@ -1,27 +1,27 @@
 using UnityEngine;
 using System.Collections;
 
-//HashTable : Á¤¼ö Çü½Ä, ¹®ÀÚ¿­ Çü½ÄÀÇ ÀÎµ¦½º¸¦ »ç¿ëÇÏ¿© µ¥ÀÌÅÍ(°ª)µéÀ» ÀúÀå, °ü¸®ÇÏ´Â Å¬·¡½º
-// [0], [1], [2], ["¹®ÀÚ¿­"], ["ÀÌ¸§"]
+//HashTable : ì •ìˆ˜ í˜•ì‹, ë¬¸ìì—´ í˜•ì‹ì˜ ì¸ë±ìŠ¤ë¥¼ ì‚¬ìš©í•˜ì—¬ ë°ì´í„°(ê°’)ë“¤ì„ ì €ì¥, ê´€ë¦¬í•˜ëŠ” í´ë˜ìŠ¤
+// [0], [1], [2], ["ë¬¸ìì—´"], ["ì´ë¦„"]
 public class HashTableDemo : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        //[1] HashTable Å¬·¡½ºÀÇ ÀÎ½ºÅÏ½º(°´Ã¼,°³Ã¼)¸¦ »ı¼º
+        //[1] HashTable í´ë˜ìŠ¤ì˜ ì¸ìŠ¤í„´ìŠ¤(ê°ì²´,ê°œì²´)ë¥¼ ìƒì„±
         Hashtable hash = new Hashtable();
 
-        //[2] µ¥ÀÌÅÍ ³Ö±â : ÀÎµ¦½º »ç¿ë
-        hash[0] = "´ëÇÑ¹Î±¹";
-        hash["µµ"] = "°æ±âµµ";
-        hash["´ë·ú"] = "¾Æ½Ã¾Æ";
+        //[2] ë°ì´í„° ë„£ê¸° : ì¸ë±ìŠ¤ ì‚¬ìš©
+        hash[0] = "ëŒ€í•œë¯¼êµ­";
+        hash["ë„"] = "ê²½ê¸°ë„";
+        hash["ëŒ€ë¥™"] = "ì•„ì‹œì•„";
 
-        //[3] µ¥ÀÌÅÍ »ç¿ë
+        //[3] ë°ì´í„° ì‚¬ìš©
         /*for (int i = 0; i < hash.Count; i++)
         {
             Debug.Log(hash[i]);
-            Debug.Log(hash["µµ"]);
-            Debug.Log(hash["´ë·ú"]);
+            Debug.Log(hash["ë„"]);
+            Debug.Log(hash["ëŒ€ë¥™"]);
         }*/
 
         foreach(var i in hash.Keys)
