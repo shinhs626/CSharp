@@ -15,6 +15,10 @@ namespace Override
             Dog dog = new Dog();
             dog.Eat();
 
+            Cat cat = new Cat();
+            cat.Eat();
+
+            //업 캐스팅 : 다형성
             //부모 클래스(Animal)의 변수에 자식 클래스의 인스턴스 생성
             Animal dog2 = new Dog();
             dog2.Eat();
