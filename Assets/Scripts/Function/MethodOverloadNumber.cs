@@ -1,36 +1,47 @@
 using UnityEngine;
 
-//MethodOverload(¸Ş¼­µå ¿À¹ö·Îµå, ÇÔ¼ö ´ÙÁß Á¤ÀÇ)
-//µ¿ÀÏÇÑ ÀÌ¸§ÀÇ ¸Ş¼­µå¸¦ ¸Å°³ º¯¼ö¸¦ ´Ù¸£°Ô ÇØ¼­ ¿©·¯ °³ »ı¼ºÇÏ´Â °Í
+//MethodOverload(ë©”ì„œë“œ ì˜¤ë²„ë¡œë“œ, í•¨ìˆ˜ ë‹¤ì¤‘ ì •ì˜)
+//ë™ì¼í•œ ì´ë¦„ì˜ ë©”ì„œë“œë¥¼ ë§¤ê°œ ë³€ìˆ˜ë¥¼ ë‹¤ë¥´ê²Œ í•´ì„œ ì—¬ëŸ¬ ê°œ ìƒì„±í•˜ëŠ” ê²ƒ
 public class MethodOverloadNumber : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        PrintNumber(1234);
+        /*PrintNumber(1234);
         PrintNumber(1234L);
-        PrintNumber(1234F);
+        PrintNumber(1234F);*/
+
+        PrintNumber<int>(1234);
+        PrintNumber<long>(1234L);
+        PrintNumber<float>(1234F);
+        PrintNumber<double>(1234);
     }
 
-    //ÇÔ¼ö ´ÙÁß Á¤ÀÇ
+    //ì œë„¤ë¦­ ë©”ì„œë“œ
+    void PrintNumber<T>(T number)
+    {
+        Debug.Log($"{number}");
+    }
 
-    //¸Å°³ º¯¼ö·Î ¼ıÀÚ¸¦ ÀÔ·Â ¹Ş¾Æ Ãâ·ÂÇÏ´Â ÇÔ¼ö
-    //int Å¸ÀÔÀÇ Á¤¼ö¸¦ ¸Å°³ º¯¼ö·Î ÀÔ·Â ¹Ş¾Æ Ãâ·Â
+    //í•¨ìˆ˜ ë‹¤ì¤‘ ì •ì˜
+
+    //ë§¤ê°œ ë³€ìˆ˜ë¡œ ìˆ«ìë¥¼ ì…ë ¥ ë°›ì•„ ì¶œë ¥í•˜ëŠ” í•¨ìˆ˜
+    //int íƒ€ì…ì˜ ì •ìˆ˜ë¥¼ ë§¤ê°œ ë³€ìˆ˜ë¡œ ì…ë ¥ ë°›ì•„ ì¶œë ¥
     void PrintNumber(int num)
     {
         Debug.Log($"int32: {num}");
     }
 
-    //long Å¸ÀÔÀÇ Á¤¼ö¸¦ ¸Å°³ º¯¼ö·Î ÀÔ·Â ¹Ş¾Æ Ãâ·Â
+    //long íƒ€ì…ì˜ ì •ìˆ˜ë¥¼ ë§¤ê°œ ë³€ìˆ˜ë¡œ ì…ë ¥ ë°›ì•„ ì¶œë ¥
     void PrintNumber(long num)
     {
         Debug.Log($"int64: {num}");
     }
 
-    //float Å¸ÀÔÀÇ Á¤¼ö¸¦ ¸Å°³ º¯¼ö·Î ÀÔ·Â ¹Ş¾Æ Ãâ·Â
+    //float íƒ€ì…ì˜ ì •ìˆ˜ë¥¼ ë§¤ê°œ ë³€ìˆ˜ë¡œ ì…ë ¥ ë°›ì•„ ì¶œë ¥
     void PrintNumber(float num)
     {
-        Debug.Log($"½Ç¼öÇü: {num}");
+        Debug.Log($"ì‹¤ìˆ˜í˜•: {num}");
     }
 
 }
